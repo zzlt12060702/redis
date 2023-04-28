@@ -5,8 +5,8 @@ Modify: 20240428
 END
 get_src() {
     yum install -y gcc make git &> /dev/null
-    git clone https://github.com/zzlt12060702/redis.git /opt/redis
-    cd /opt/redis
+    #git clone https://github.com/zzlt12060702/redis.git /opt/redis
+    cd /tmp/redis
     make PREFIX=/usr/local/redis install 
     [ $? -ne 0 ] && echo -e "/033[31make failed\033[0m"
     mkdir /usr/local/redis/{run,logs,data,conf}
